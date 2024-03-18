@@ -1,2 +1,2 @@
-# Bio-AVPpred
+# AVPpred_RBW
 Prediction of Antiviral Peptides
