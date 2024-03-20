@@ -80,14 +80,15 @@ scores = combined_model.evaluate([x_test_1mer, x_test_4mer], y_test, verbose=1)
 print(f'测试评分: {combined_model.metrics_names[0]} 为 {scores[0]}; {combined_model.metrics_names[1]} 为 {scores[1] * 100}%')
 
 y_pred = combined_model.predict([x_test_1mer, x_test_4mer])
-
+accuracy1, mcc1, auc, precision1, recall1, specificity1, sensitivity1 = calculate_metrics(y_test, y_pred)
+print(f'AUC: {auc:.4f}')
 # 对预测结果应用阈值
 threshold = 0.4
 y_pred_thresholded = np.where(y_pred >= threshold, 1, 0)
 auc = calculate_metrics(y_test, y_pred)
 # 计算并打印度量标准
-accuracy, mcc, precision, recall, specificity, sensitivity = calculate_metrics(y_test, y_pred_thresholded)
-print(f'AUC: {auc:.4f}')
+accuracy, mcc, auc_1, precision, recall, specificity, sensitivity = calculate_metrics(y_test, y_pred_thresholded)
+#print(f'AUC: {auc:.4f}')
 print(f'acc: {accuracy:.4f}')
 print(f'sn: {sensitivity:.4f}')
 print(f'sp: {specificity:.4f}')
