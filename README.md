@@ -8,5 +8,5 @@ Finally, our model achieves 99.1% AUC, 93.83% MCC, 96.9%,98.3% SN, 95.4% SP on t
  ![image](https://github.com/zyweizm/AVPpred_RBW/assets/117652641/3a432bb2-7886-43b6-8a31-a36b37b57167)
 
 Our dataset of biological words representation is available at:
-链接：https://pan.baidu.com/s/1IIW6kUwZPQnlrLJ240YVmw 
-提取码：7668
+Baidu Netdisk: https://pan.baidu.com/s/1IIW6kUwZPQnlrLJ240YVmw 
+Code: 7668
